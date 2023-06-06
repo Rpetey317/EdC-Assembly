@@ -1,12 +1,4 @@
-*.bin
-*.lst
-10-sumcheck.bin
-11-sumcheck-unsigned.lst
-swapper.lst
-11-sumcheck-unsigned.bin
-absval.bin
-absval.lst
-sumas.bin
-sumas.lst
-swapper.bin
-10-sumcheck.lst
+/*.bin
+/*.lst
+
+/.vscode/
