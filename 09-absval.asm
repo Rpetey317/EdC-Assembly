@@ -1,10 +1,16 @@
 .begin
 .org 2048
 
+	!;register usage
+	!;r1, r2 -> values
+	!;r14 -> stack pointer
+
 	ld [A], %r1
 	ld [B], %r2
+
 	addcc %r14, -4, %r14
-	st %r1, %r14
+	st %r1, %r14			;push r1 to stack
+
 	call abs
 	ld %r14, %r3
 	st %r2, %r14

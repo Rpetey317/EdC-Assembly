@@ -2,7 +2,7 @@
  HexLoc     DecLoc    MachWord   Label        Instruction                Comment
                                               .org 2048                  
                                                                          
-                                                                         !Main
+                                                                         !;Main
                                                                          
 00000800  0000002048  c2002854                ld [2132], %r1             
 00000804  0000002052  c4002858                ld [2136], %r2             
@@ -36,14 +36,14 @@
 00000868  0000002152            RESULT:       .dwb 3                     
                                                                          
                                                                          
-                                                                         !Suma, param. pasados por registros
-                                                                         !%r3 := %r1 + %r2
+                                                                         !;Suma, param. pasados por registros
+                                                                         !;%r3 := %r1 + %r2
 00000874  0000002164  86804002  SUM_1:        addcc %r1, %r2, %r3        
 00000878  0000002168  81c3e004                jmpl %r15, 4, %r0          
                                                                          
                                                                          
-                                                                         !Suma, param. pasados por stack
-                                                                         !ARR[2] := ARR[0] + ARR[1]
+                                                                         !;Suma, param. pasados por stack
+                                                                         !;ARR[2] := ARR[0] + ARR[1]
 0000087c  0000002172  d0014000  SUM_2:        ld %r5, %r8                
 00000880  0000002176  d2016004                ld %r5, [4], %r9           
 00000884  0000002180  94820009                addcc %r8, %r9, %r10       
@@ -51,7 +51,7 @@
 0000088c  0000002188  81c3e004                jmpl %r15, 4, %r0          
                                                                          
                                                                          
-                                                                         !Suma, param. pasados por stack		
+                                                                         !;Suma, param. pasados por stack		
 00000890  0000002192  d4038000  SUM_3:        ld %r14, %r10              
 00000894  0000002196  9c83a004                addcc %r14, 4, %r14        
 00000898  0000002200  d6038000                ld %r14, %r11              
